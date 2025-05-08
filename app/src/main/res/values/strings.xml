@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VitalSyncProjeto</string>
+    <string name="title_home">Home</string>
+    <string name="title_vitalai">VitAI</string>
+    <string name="title_recomendacoes">Recomendações</string>
+    <string name="title_geral">Geral</string>
+    <string name="title_grupo">Grupo</string>
+</resources>

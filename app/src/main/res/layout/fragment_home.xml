@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:padding="20dp"
+    android:background="#E7FFDF"
+    >
+
+    <TextView
+        android:id="@+id/title_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOJE"
+        android:textSize="30dp"
+        android:textColor="#2D6A2E"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resumo do dia"
+        android:textSize="20dp"
+        android:textColor="#2D6A2E"
+        app:layout_constraintTop_toBottomOf="@id/title_principal"
+        app:layout_constraintStart_toStartOf="@id/title_principal"
+        android:layout_marginTop="5dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_qualidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sub_title"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_container_borda"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/title_qualidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qualidade do sono"
+            android:textSize="19sp"
+            android:textColor="#2D6A2E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/img_moon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/moon"
+            app:layout_constraintStart_toStartOf="@id/title_qualidade"
+            app:layout_constraintTop_toBottomOf="@id/title_qualidade"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/qualidade_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="82"
+            android:textSize="60sp"
+            app:layout_constraintStart_toEndOf="@id/img_moon"
+            app:layout_constraintTop_toBottomOf="@id/title_qualidade"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boa"
+            android:textSize="25sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/img_moon"
+            app:layout_constraintTop_toBottomOf="@id/qualidade_number"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:flow_wrapMode="aligned"
+        android:id="@+id/container_recomendacoes"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sub_title"
+        app:layout_constraintStart_toEndOf="@id/container_qualidade"
+
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_container_borda"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        >
+
+        <TextView
+
+            android:id="@+id/title_recomendacoes"
+            android:maxWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Próximas recomendações"
+            android:textSize="19sp"
+            android:textColor="#2D6A2E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_refeicao"
+            app:layout_constraintTop_toBottomOf="@id/title_recomendacoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/food"
+                />
+
+            <TextView
+
+                android:id="@+id/title_refeicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00"
+                android:textSize="19sp"
+                android:textColor="#2D6A2E"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_caminhar"
+            app:layout_constraintTop_toBottomOf="@id/linear_refeicao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            tools:ignore="MissingConstraints" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/run"
+                />
+
+            <TextView
+
+                android:id="@+id/title_caminhar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14:30"
+                android:textSize="19sp"
+                android:textColor="#2D6A2E"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_proximo"
+            app:layout_constraintTop_toBottomOf="@id/linear_caminhar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            tools:ignore="MissingConstraints" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow"
+                />
+
+            <TextView
+
+                android:id="@+id/title_proximo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15:00"
+                android:textSize="19sp"
+                android:textColor="#2D6A2E"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/sub_progresso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progresso"
+        android:textSize="20dp"
+        android:textColor="#2D6A2E"
+        app:layout_constraintTop_toBottomOf="@id/container_qualidade"
+        app:layout_constraintStart_toStartOf="@id/title_principal"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/sub_progresso"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_container_borda"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:layout_marginBottom="10dp"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:src="@drawable/moon" />
+
+            <TextView
+                android:layout_width="277dp"
+                android:layout_height="match_parent"
+                android:text="Registrar sono"
+                android:textColor="#2D6A2E"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bigarrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_container_borda"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:layout_marginBottom="10dp"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:src="@drawable/food" />
+
+            <TextView
+                android:layout_width="277dp"
+                android:layout_height="match_parent"
+                android:text="Registrar refeição"
+                android:textColor="#2D6A2E"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bigarrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_container_borda"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:src="@drawable/run" />
+
+            <TextView
+                android:layout_width="277dp"
+                android:layout_height="match_parent"
+                android:text="Registrar exercício"
+                android:textColor="#2D6A2E"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bigarrow" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver mais"
+            android:layout_gravity="end"
+            android:textColor="#2D6A2E"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

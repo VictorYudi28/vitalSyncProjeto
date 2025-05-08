@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="br.com.empresa.vitalsyncprojeto.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_vitalai"
+        android:name="br.com.empresa.vitalsyncprojeto.ui.vitalai.VitalaiFragment"
+        android:label="@string/title_vitalai"
+        tools:layout="@layout/fragment_vitalai" />
+
+    <fragment
+        android:id="@+id/navigation_recomendacoes"
+        android:name="br.com.empresa.vitalsyncprojeto.ui.recomendacoes.RecomendacoesFragment"
+        android:label="@string/title_recomendacoes"
+        tools:layout="@layout/fragment_recomendacoes" />
+
+    <fragment
+        android:id="@+id/navigation_geral"
+        android:name="br.com.empresa.vitalsyncprojeto.ui.geral.GeralFragment"
+        android:label="Geral"
+        tools:layout="@layout/fragment_geral"
+        />
+</navigation>

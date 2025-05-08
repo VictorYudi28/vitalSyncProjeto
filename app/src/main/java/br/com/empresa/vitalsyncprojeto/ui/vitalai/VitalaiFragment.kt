@@ -1,0 +1,34 @@
+package br.com.empresa.vitalsyncprojeto.ui.vitalai
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import br.com.empresa.vitalsyncprojeto.databinding.FragmentVitalaiBinding
+import br.com.empresa.vitalsyncprojeto.R
+
+class VitalaiFragment : Fragment() {
+
+private var _binding: FragmentVitalaiBinding? = null
+  // This property is only valid between onCreateView and
+  // onDestroyView.
+  private val binding get() = _binding!!
+
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View {
+
+      return inflater.inflate(R.layout.fragment_home,container,false)
+
+  }
+
+override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}

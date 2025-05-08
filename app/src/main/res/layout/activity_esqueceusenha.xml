@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#004A2F"
+    android:paddingHorizontal="30dp"
+    android:layout_gravity="center"
+
+    >
+
+    <ImageView
+        android:id="@+id/img_coracao"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/cadeado"
+        />
+
+    <TextView
+        android:id="@+id/txv_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esqueceu a senha"
+        android:textColor="#FBF7F6"
+        android:textSize="45dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/img_coracao"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="sans-serif"
+        />
+
+    <TextView
+        android:id="@+id/txv_orientacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite seu endereço de email e enviaremos um link para redefinir sua senha"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/txv_principal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:textSize="23dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/txv_orientacao"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/edittext_background"
+        android:hint="exemplo@gmail.com"
+        android:padding="10dp"
+        android:fontFamily="sans-serif"
+        />
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/btn_cancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_enviar"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
+    />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
